@@ -24,4 +24,31 @@ function bubbleSort(array) {
 
 let bubbleSortResult = bubbleSort([6, 3, 1, 9, 8, 10]);
 
-console.log(bubbleSortResult);
+// console.log(bubbleSortResult);
+
+
+/* ===== Insertion sort ===== */
+
+function insertionSort(array) {
+
+    for (let i = 1; i < array.length; i++) {
+
+        for (let j = i; j > 0; j--) {
+
+            if (array[j] < array[j - 1]) {
+
+                [array[j], array[j - 1]] = [array[j - 1], array[j]];
+
+            }
+
+        }
+
+    }
+
+    return array;
+
+}
+
+let insertionSortResult = insertionSort([6, 3, 1, 9, 8, 10]);
+
+console.log(insertionSortResult);
